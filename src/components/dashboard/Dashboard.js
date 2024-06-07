@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 import SideBar from '../side-bar/SideBar';
 import FlowComponent from './FlowComponent';

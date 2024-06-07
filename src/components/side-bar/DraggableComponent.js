@@ -1,8 +1,6 @@
 import React from 'react';
-import { FaCircleCheck } from 'react-icons/fa6';
-import { HiOutlineClock, HiOutlineMail } from 'react-icons/hi';
-import { capitalizeString, generateContent, generateNodeId } from '../../utils';
 import { useReactFlow } from 'reactflow';
+import { capitalizeString, generateContent, generateNodeId } from '../../utils';
 
 const DraggableComponent = ({ setMenuVisible }) => {
   const { setNodes } = useReactFlow();
@@ -51,52 +49,17 @@ const DraggableComponent = ({ setMenuVisible }) => {
         </div>
 
         <div
-          className='rounded-md cursor-grab'
-          onDragStart={(event) => onDragStart(event, 'email')}
-          onClick={() => handleClick('email')}
+          className='cursor-grab bg-transparent rounded-md bg-red-300'
+          onDragStart={(event) => onDragStart(event, 'custom')}
+          onClick={() => handleClick('custom')}
           draggable
         >
-          <div className='flex bg-white p-3 border-[1px] rounded-md capitalize min-w-56 hover:shadow-md transition-all duration-300'>
-            <div className='p-2 border-[1px] border-[#8929e0] rounded-md bg-[#e3ccf8]'>
-              <HiOutlineMail color='#8929e0' size={30} />
-            </div>
-            <div className='pl-2'>
-              <h2 className='font-bold font-sans'>Email</h2>
-              <p>Template: Signal</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className='rounded-md cursor-grab'
-          onDragStart={(event) => onDragStart(event, 'delay')}
-          onClick={() => handleClick('delay')}
-          draggable
-        >
-          <div className='flex bg-white p-3 border-[1px] rounded-md capitalize min-w-56 hover:shadow-md transition-all duration-300'>
-            <div className='p-2 border-[1px] border-[#01a7ff] rounded-md bg-[#eaf1f7]'>
-              <HiOutlineClock color='#01a7ff' size={30} />
-            </div>
-            <div className='pl-2'>
-              <h2 className='font-bold font-sans'>Delay</h2>
-              <p>Wait: 1 Day</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          className='rounded-md cursor-grab'
-          onDragStart={(event) => onDragStart(event, 'complete')}
-          onClick={() => handleClick('complete')}
-          draggable
-        >
-          <div className='flex bg-white p-3 border-[1px] rounded-md capitalize min-w-56 hover:shadow-md transition-all duration-300'>
-            <div className='p-2 border-[1px] border-[#27c027] rounded-md bg-[#c2e7c2]'>
-              <FaCircleCheck color='#27c027' size={30} />
-            </div>
-            <div className='pl-2'>
-              <h2 className='font-bold font-sans'>Complete</h2>
-              <p>Task Completed</p>
+          <div className='flex shadow-md rounded-md capitalize min-w-56 hover:shadow-md transition-all duration-300'>
+            <div className='w-full  rounded-md'>
+              <h2 className='font-bold font-sans bg-teal-200 w-full px-2 py-1 rounded-t-lg'>
+                Send Message
+              </h2>
+              <p className='px-2 py-1 rounded-b-lg'>Text message 1</p>
             </div>
           </div>
         </div>

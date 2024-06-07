@@ -1,6 +1,6 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { memo, useEffect, useState } from 'react';
 import { Handle, Position, useReactFlow } from 'reactflow';
+import CustomHandle from '../custom-handle/CustomHandle';
 
 const DefaultNode = (props) => {
   const {
@@ -32,7 +32,7 @@ const DefaultNode = (props) => {
         className='px-1 outline-[#818cf8] text-center'
         onChange={(e) => setTitile(e.target.value)}
       />
-      <Handle type='target' position={Position.Top} />
+      <CustomHandle type='target' position={Position.Top} isConnectable={1} />
       <Handle type='source' position={Position.Bottom} />
     </div>
   );

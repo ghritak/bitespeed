@@ -1,7 +1,6 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { memo, useEffect, useState } from 'react';
-import { HiOutlineMail } from 'react-icons/hi';
 import { Handle, Position, useReactFlow } from 'reactflow';
+import CustomHandle from '../custom-handle/CustomHandle';
 
 const EmailNode = (props) => {
   const {
@@ -28,26 +27,25 @@ const EmailNode = (props) => {
   }, [title, para]);
 
   return (
-    <div className='flex items-start bg-white p-3 border-[1px] rounded-md capitalize min-w-56 hover:shadow-md transition-all duration-300'>
-      <div className='p-2 border-[1px] border-[#8929e0] rounded-md bg-[#e3ccf8]'>
-        <HiOutlineMail color='#8929e0' size={30} />
-      </div>
-      <div className='pl-2'>
-        <div className='flex flex-col'>
+    <div className='flex items-start rounded-md capitalize hover:shadow-md transition-all duration-300'>
+      <div className='flex flex-col '>
+        <div className='bg-teal-200 rounded-t-md'>
           <input
             value={title}
-            className='font-bold font-sans mb-1 px-1 outline-[#8929e0]'
+            className='font-bold font-sans px-2 py-1 outline-[#8929e0] bg-transparent min-w-56 '
             onChange={(e) => setTitile(e.target.value)}
           />
+        </div>
+        <div className='rounded-b-md bg-white'>
           <input
             value={para}
-            className='px-1 outline-[#8929e0]'
+            className='px-2 py-1 outline-[#8929e0] min-w-56 bg-transparent'
             onChange={(e) => setPara(e.target.value)}
           />
         </div>
       </div>
 
-      <Handle type='target' position={Position.Top} />
+      <CustomHandle type='target' position={Position.Top} isConnectable={1} />
       <Handle type='source' position={Position.Bottom} />
     </div>
   );

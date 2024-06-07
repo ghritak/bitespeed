@@ -3,9 +3,7 @@ export function capitalizeString(string) {
 }
 
 export function generateContent(type) {
-  if (type === 'email') return 'This is email content';
-  if (type === 'delay') return 'Wait 1 day';
-  if (type === 'complete') return 'Task completed';
+  if (type === 'custom') return 'Text message 1';
 }
 
 export const generateNodeId = () => `${Date.now()}`;

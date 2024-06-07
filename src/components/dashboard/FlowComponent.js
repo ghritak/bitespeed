@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import { useCallback, useRef, useState } from 'react';
 import ReactFlow, {
@@ -10,9 +9,7 @@ import ReactFlow, {
   Background,
 } from 'reactflow';
 import DefaultNode from '../custom-nodes/DefaultNode';
-import EmailNode from '../custom-nodes/EmailNode';
-import DelayNode from '../custom-nodes/DelayNode';
-import CompleteNode from '../custom-nodes/CompleteNode';
+import CustomNode from '../custom-nodes/CustomNode';
 import {
   capitalizeString,
   generateContent,
@@ -27,9 +24,7 @@ import useToast from '../../hooks/useToast';
 
 const nodeTypes = {
   defaultNode: DefaultNode,
-  email: EmailNode,
-  delay: DelayNode,
-  complete: CompleteNode,
+  custom: CustomNode,
 };
 
 const FlowComponent = ({ flowData, user: { token } }) => {
@@ -72,7 +67,9 @@ const FlowComponent = ({ flowData, user: { token } }) => {
         type,
         position,
         data: {
-          label: capitalizeString(type === 'defaultNode' ? 'Default' : type),
+          label: capitalizeString(
+            type === 'defaultNode' ? 'Default' : 'Send Message'
+          ),
           content: generateContent(type),
         },
       };
