@@ -64,6 +64,11 @@ const DraggableComponent = ({ setMenuVisible }) => {
           </div>
         </div>
       </div>
+
+      <div className='description text-sm hidden lg:block'>
+        Click on the text to edit and right click on node to duplicate or
+        delete.
+      </div>
     </div>
   );
 };

@@ -41,6 +41,13 @@ Follow these steps to set up the project:
 5. **View the application:**
    Open your web browser and go to [http://localhost:3000](http://localhost:3000) to view the application.
 
+6. **Login with below credentials or create an account.**
+
+   ```bash
+    email = ghritak@gmail.com
+    password = ghritak
+   ```
+
 ## Additional Information
 
 For more information about React.js, check out the [React documentation](https://reactjs.org/docs/getting-started.html).
