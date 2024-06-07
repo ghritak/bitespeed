@@ -131,6 +131,7 @@ const Login = () => {
               Sign up
             </span>
           </div>
+          <p className='text-center'>Test with the pre-defined credentials</p>
         </form>
       </div>
     </div>
