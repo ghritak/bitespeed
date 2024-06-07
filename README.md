@@ -1,6 +1,6 @@
-# FutureBlink
+# BiteSpeed
 
-Welcome to FutureBlink! This README will guide you through setting up the project environment and running it locally.
+Welcome to BiteSpeed! This README will guide you through setting up the project environment and running it locally.
 
 ## Prerequisites
 
@@ -15,13 +15,13 @@ Follow these steps to set up the project:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/ghritak/futureblink
+   git clone https://github.com/ghritak/bitespeed
    ```
 
 2. **Navigate to the project directory:**
 
    ```bash
-   cd futureblink
+   cd bitespeed
    ```
 
 3. **Install dependencies:**
